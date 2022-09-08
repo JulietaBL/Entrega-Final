@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+
+$colorPrincipalOscuro: rgb(28, 63, 71) ;
+$colorPrincipalClaro: rgb(161, 180, 180);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Italiana", serif;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  width: 200px;
+  position:relative;
+  font-size: 20px;   
+  text-decoration: none;
+  
+}
+
+ul ul {
+  position: absolute;
+  display: none;
+ 
+}
+
+ul ul li {
+  display: block;
+ 
+}
+
+ul li:hover ul {
+  display:block;
+  
+}
+
+nav {
+  grid-area: nav;
+  text-decoration: none;
+  height: 150px;
+}
+
+.container{
+    margin: 0px;
+    height: 100vh;
+    max-width: 100%;
+}
+
+#container-fluid{
+    --bs-gutter-x: 1.5rem;
+    width: 100%;
+}
+
+.menu{
+    margin-right: 0px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+
+.divisiones{
+    display: grid;
+    grid-area: divisiones;
+    
+    background-color: $colorPrincipalClaro;
+    
+}
+
+.arquitectura{
+    background-image: url(../Media/Arquitectura4.jpg);
+    background-size: cover;
+}
+
+.ingenieria{
+    background-image: url(../Media/ingenieria.jpeg);
+    background-size: cover;
+}
+
+.urbanismo{
+    background-image: url(../Media/Plano-de-casa-de-campo-un-piso.jpg);
+    background-size: cover;
+}
+
+#div4 {
+   background-image: url(../Media/LOGO_Mesa\ de\ trabajo\ 1.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+#div5, #div6 {
+   text-align: start;
+   padding-top: 45px;
+}
+
+
+
+@media screen and (min-width:320px){
+  .footer1, .footer2, .footer3{
+    line-height: 5px;
+ }
+
+ .footer1{
+    padding: 15px;
+    text-align: center;
+    color: $colorPrincipalClaro;
+ }
+
+ .footer2{
+    padding: 15px;
+    text-align: center;
+ }
+
+ .footer3{
+    padding: 15px;
+    text-align: center;
+ }
+
+ .footer2, .footer3{
+    background-color: $colorPrincipalClaro;
+ }
+
+ .arquitectura, .ingenieria, .urbanismo{
+  text-align: center;
+  color:azure;
+  font-size: 40px;
+  height: 150px;
+  padding-top: 50px;
+  }
+}
+
+
+
+@media screen and (min-width:1200px){
+
+  .divisiones{
+    
+    grid-template-rows: repeat(3, auto);
+    
+    height: 1000px; 
+    row-gap: 50px;
+ }
+
+ .arquitectura, .ingenieria, .urbanismo{
+    text-align: center;
+    color:azure;
+    font-size: 100px;
+ }
+
+ .arq, .ing, .urb{
+    margin-top: 100px;
+    
+ }
+
+  #div4, #div5, #div6{
+    line-height: 10px;
+ }
+
+ #div4{
+    grid-area: div4;
+    padding: 60px 50px 30px 50px;
+    text-align: center;
+    color: black;
+ }
+
+ #div5{
+    grid-area: div5;
+    text-align: start;
+    background-color: aliceblue;
+ }
+
+ #div6{
+    grid-area: div6;
+    text-align: start;
+    background-color: aliceblue;
+
+ }
+
+ .gridfooter {
+    background-color: aliceblue;
+    grid-area: gridfooter;
+ }
+
+ footer{
+    grid-area: footer;
+    display: grid;
+    background-color:aliceblue;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: "div4 div5 div6" "div4 div5 div6" "div4 div5 div6";
+    grid-template-rows: 250px;
+    width: auto;
+    bottom: 0;
+ }
+
+ #div4, #div5, #div6 {
+    margin: 50px;
+    font-size: 20px;
+ }
+
+ .arquitectura:hover {
+   transform:scale(1.05);
+   transform:scale(1.05);
+   }
+   .ingenieria:hover {
+   transform:scale(1.05);
+   transform:scale(1.05);
+   }
+   .urbanismo:hover {
+   transform:scale(1.05);
+   transform:scale(1.05);
+   }
+
+}

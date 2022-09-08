@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Italiana", serif;
+}
+
+li {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+ul ul {
+  position: absolute;
+  display: none;
+}
+
+ul ul li {
+  display: block;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+nav {
+  grid-area: nav;
+  text-decoration: none;
+}

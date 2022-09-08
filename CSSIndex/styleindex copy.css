@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Italiana", serif;
+}
+
+nav {
+  grid-area: nav;
+  background-color: rgb(35, 119, 192);
+  text-decoration: none;
+}
+
+.btn btn-outline-success {
+  color: red;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.imagen {
+  grid-area: imagen;
+  background-image: url(../Media/plano.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.instrucciones {
+  grid-area: instrucciones;
+  transition: all 3s;
+}
+.instruccioneshover {
+  background-color: rgba(28, 63, 71, 0.555);
+}
+
+#div1 {
+  grid-area: div1;
+}
+
+#div2 {
+  grid-area: div2;
+}
+
+#div3 {
+  grid-area: div3;
+}
+
+footer {
+  grid-area: footer;
+  background-color: aliceblue;
+}
+
+.title {
+  text-align: right;
+  color: aliceblue;
+}
+
+#div4 {
+  background-color: rgb(161, 180, 180);
+  padding: 60px 50px 30px 50px;
+  text-align: center;
+}
+
+.menu {
+  margin-left: 35%;
+  text-decoration: none;
+  margin-top: 35px;
+}
+
+#div5, #div6 {
+  text-align: start;
+}
+
+.container, footer, .instrucciones {
+  display: grid;
+}
+
+.gridfooter {
+  background-color: aliceblue;
+  grid-area: gridfooter;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    grid-template-areas: "nav nav" "imagen imagen" "instrucciones instrucciones";
+    grid-template-rows: 10% 40% 50%;
+    height: 1100px;
+    margin-left: auto;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "div4 div4 div4" "div5 div5 div5" "div6 div6 div6";
+    grid-template-rows: 10%;
+    height: 70px;
+  }
+  .instrucciones {
+    grid-template-areas: "div1 div1" "div2 div2" "div3 div3";
+    background-color: rgba(64, 138, 155, 0.555);
+    text-align: right;
+    font-size: 11px;
+  }
+  #div1, #div2, #div3 {
+    margin-top: 10px;
+    margin-left: 50%;
+    margin-right: 3%;
+  }
+  .title {
+    font-size: 30px;
+    margin: 10% 5% 5% 35%;
+  }
+  .menu {
+    display: none;
+  }
+  #div4, #div5, #div6 {
+    margin: 5%;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    grid-template-areas: "nav nav nav" "imagen imagen imagen" "instrucciones instrucciones instrucciones";
+    grid-template-rows: 150px 660px 750px;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: "div4 div4 div4" "div5 div5 div5" "div6 div6 div6";
+    grid-template-rows: 250px;
+    height: 100%;
+    width: 100%;
+  }
+  .instrucciones {
+    grid-template-areas: "div1 div2 div3";
+    background-color: rgba(64, 138, 155, 0.555);
+    text-align: justify;
+    font-size: 20px;
+  }
+  #div1, #div2, #div3 {
+    margin: 5%;
+    margin-top: 450px;
+    text-align: center;
+  }
+  .title {
+    font-size: 90px;
+    margin: 150px 50px 100px 250px;
+  }
+  #div4, #div5, #div6 {
+    margin: 50px;
+    font-size: 20px;
+  }
+  .menu {
+    display: block;
+  }
+  .nav-item-home {
+    margin-left: 50px;
+  }
+  form {
+    margin-right: 50px;
+  }
+}  

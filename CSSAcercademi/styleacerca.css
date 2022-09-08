@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0%;
+}
+
+body {
+  font-family: "Italiana", serif;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+ul ul {
+  position: absolute;
+  display: none;
+}
+
+ul ul li {
+  display: block;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+.container {
+  margin: 0px;
+  height: 100vh;
+  max-width: 100%;
+}
+
+#container-fluid {
+  --bs-gutter-x: 1.5rem;
+  width: 100%;
+}
+
+.menu {
+  margin-right: 0px;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.grid2 {
+  display: grid;
+  grid-area: grid2;
+}
+
+.textoAcerca {
+  font-size: 35px;
+  background-color: rgb(161, 180, 180);
+}
+
+.section-dos {
+  background-color: rgba(28, 63, 71, 0.555);
+  background-image: url(../Media/UnionesMetálicas_01.jpg);
+  background-size: cover;
+}
+
+nav {
+  grid-area: nav;
+  background-color: aliceblue;
+  height: 150px;
+}
+
+.titulo {
+  grid-area: titulo;
+  display: grid;
+  background-image: url(../Media/bajo-nivel-longchamps.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#tituloAcerca {
+  color: aliceblue;
+  text-align: left;
+}
+
+#div4 {
+  background-image: url(../Media/LOGO_Mesa\ de\ trabajo\ 1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#div5, #div6 {
+  text-align: start;
+  padding-top: 45px;
+}
+
+@media screen and (min-width: 320px) {
+  #tituloAcerca {
+    font-size: 50px;
+    margin-left: 25px;
+    margin-top: 70px;
+  }
+  .textoAcerca {
+    font-size: 20px;
+    padding: 30px;
+  }
+  .footer1, .footer2, .footer3 {
+    line-height: 5px;
+  }
+  .footer1 {
+    /*background-color: $colorPrincipalOscuro;*/
+    padding: 15px;
+    text-align: center;
+    color: rgb(161, 180, 180);
+  }
+  .footer2 {
+    padding: 15px;
+    text-align: center;
+  }
+  .footer3 {
+    padding: 15px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .titulo {
+    height: 400px;
+  }
+  #tituloAcerca {
+    font-size: 120px;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  .textoAcerca {
+    font-size: 34px;
+  }
+  .grid2 {
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(161, 180, 180);
+    height: 400px;
+  }
+  #div4, #div5, #div6 {
+    line-height: 10px;
+  }
+  #div4 {
+    grid-area: div4;
+    padding: 60px 50px 30px 50px;
+    text-align: center;
+  }
+  #div5 {
+    grid-area: div5;
+    text-align: start;
+  }
+  #div6 {
+    grid-area: div6;
+    text-align: start;
+  }
+  .gridfooter {
+    background-color: aliceblue;
+    grid-area: gridfooter;
+  }
+  footer {
+    grid-area: footer;
+    display: grid;
+    background-color: aliceblue;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: "div4 div5 div6" "div4 div5 div6" "div4 div5 div6";
+    grid-template-rows: 250px;
+    width: auto;
+    bottom: 0;
+  }
+  #div4, #div5, #div6 {
+    margin: 50px;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=styleacerca.css.map */
